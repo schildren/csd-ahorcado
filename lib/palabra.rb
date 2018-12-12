@@ -18,4 +18,9 @@ class Palabra
 	  else return "False"
 	  end
         end
+
+	def dividir(texto)
+		return texto.split(//) 
+	end 
+
 end
