@@ -5,7 +5,5 @@ describe Palabra do
 		palabra=Palabra.new
 		vector=palabra.dividir("Magio")
 		vector.size==5
-	end
-
-	
+	end	
 end
