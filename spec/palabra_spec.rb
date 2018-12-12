@@ -15,8 +15,8 @@ describe Palabra do
 
  it "La palabra retorna True si contiene una letra" do
   palabra = Palabra.new
-  palabra.setPalabra("Hola Mundo")
-  palabra.getPalabra.should == "Hola Mundo"
+  palabra.setPalabra("Desarrollo")
+  palabra.contiene("t").should == "False"
  end
 
 end
