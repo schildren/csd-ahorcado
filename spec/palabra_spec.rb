@@ -25,10 +25,4 @@ describe Palabra do
   vector.size==5
  end
 
-it "Al inicializar el juego, las variables del juego deben resetearse" do
-  juego=Juego.new
-  juego.getPuntuacion==6
-  juego.getPalabra=="developer"
-  juego.getCaracteresValidos==[]
- end
 end
