@@ -10,6 +10,7 @@ post '/ingresarLetra' do
 	@palabraSegmentada=@@juego.mostrarPalabraSegmentada(letra)
 	@puntuacion = @@juego.getPuntuacion
 	if @@juego.estadoJuego==true then
+		@mensaje = @@juego.mostrarMensaje
 		erb :terminado
 	else
 		erb :juego

@@ -31,10 +31,6 @@ class Juego
 		   @puntuacion= @puntuacion - 1
 		end
 
-		if (@puntuacion==0) then
-			@juegoTerminado=true	
-		end		
-
 	$i = 0	
 		while $i < getPalabra.length   do
 		@letra = getPalabra.slice($i)
@@ -48,6 +44,9 @@ class Juego
 		   end 
 		   $i +=1
 		end		
+		if (@puntuacion==0 || @segmentada==getPalabra ) then
+			@juegoTerminado=true	
+		end		
 	   return @segmentada
 	end
 
@@ -57,5 +56,13 @@ class Juego
 
 	def estadoJuego
 		return @juegoTerminado
+	end
+
+	def mostrarMensaje
+		if @puntuacion == 0 then
+			return "PERDISTE!"
+		else 
+			return "GANASTE!"
+		end
 	end
 end
