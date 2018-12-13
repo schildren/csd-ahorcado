@@ -4,15 +4,20 @@
 		<title>Ahorcado</title>
 	</head>
 	<body>
-	 	<center>BIENVENIDO !!! <name='label'></name='label'>
-		<center><h1> <%=@palabraSegmentada%> </h1> 
-		<center><h2> Tu puntuación : <%=@puntuacion%> </h2> 
-		<img src="./img/game_<%=@puntuacion%>.jpg" />
-		<form method="post" action="/ingresarLetra"> 
-	   		Letra :<input type="text" name="letra" placeholder="ingresar Letra" maxlength="1"/> 
-	   		<input type="submit" name="Ingresar" value="Ingresar letra"  />   
-		</form>
-		<center> <a href="/" name="nuevoJuego" title="nuevoJuego"> Jugar de nuevo</a></center>
+		<center>
+			<h1>AHORCADO</h1>
+			<h2>Los Magios!!! </h2>	
+			<img src="./img/game_<%=@puntuacion%>.jpg" />
+			<div style="font-size:30px;">
+				<%=@palabraSegmentada%>	
+			</div>
+			<h2> Tu puntuación : <%=@puntuacion%> </h2> 
+			<form method="post" action="/ingresarLetra"> 
+		   		Letra :<input type="text" name="letra" placeholder="ingresar Letra" maxlength="1"/> 
+		   		<input type="submit" name="Ingresar" value="Ingresar letra"  />   
+			</form>
+			<br>
+			<a href="/" name="nuevoJuego" title="nuevoJuego"> Jugar de nuevo</a>
 		</center>
 	</body>
 </html>

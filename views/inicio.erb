@@ -4,13 +4,25 @@
 		<title>Ahorcado</title>
 	</head>
 	<body>
-	 	<center>BIENVENIDO !!!, ingresa una palabra secreta a jugar:
-		
-			<form method="post" action="/registraPalabra"> 
-		   		Palabra Secreta :<input type="text" name="palabra" placeholder="Ingresar una palabra secreta" /> 
-		   		<input type="submit" name="Registrar" value="Registrar" />   
-			</form>
-			
+		<center>
+		<p>
+			<h1>BIENVENIDO !!!</h1>
+		 	Para jugar el juego AHORCADO, por favor ingresa una palabra secreta a jugar.	
+			</p>
+	 		<div>
+	 			<form method="post" action="/registraPalabra"> 
+					<table>
+						<tr>
+							<td><b>Palabra Secreta :</b></td>
+							<td><input type="text" name="palabra" placeholder="Ingresar una palabra secreta" /> </td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td><input type="submit" name="Registrar" value="Registrar" />   </td>
+						</tr>
+					</table>		   	 	
+				</form>
+	 		</div>
 		</center>
 	</body>
 </html>

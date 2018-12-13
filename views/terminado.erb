@@ -4,9 +4,12 @@
 		<title>Ahorcado</title>
 	</head>
 	<body>
-	 	<center><h1>  <%= @mensaje %></h2>  </center>
+		<center>
+			<h1>  <%= @mensaje %></h2> 
 	 		<img src="./img/game_<%=@puntuacion%>.jpg" />
-	 		<center><h1> Palabra secreta: <%= @palabraSecreta %></h2>  
-	 			<a href="/" name="nuevoJuego" title="nuevoJuego"> Jugar de nuevo</a></center>
+	 		<h2> Palabra secreta: <%= @palabraSecreta %></h2>  
+	 		<a href="/" name="nuevoJuego" title="nuevoJuego"> Jugar de nuevo</a></center>
+		</center>
+	 		
 	</body>
 </html>
