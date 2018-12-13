@@ -42,22 +42,32 @@ Given(/^hago clic en "(.*?)"$/) do |boton|
   click_button(boton)
 end
 
-Then(/^deberia ver el mensaje PERDISTE!$/) do
-  visit '/terminado'
-end
 
 When(/^ingreso todas las "(.*?)" correctas y hago clic en el boton "(.*?)"$/) do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
+   fill_in(campo, :with => caracter)
+    click_button(boton)
+
+    fill_in(campo, :with => caracter)
+    click_button(boton)
+
+    fill_in(campo, :with => caracter)
+    click_button(boton)
+
+    fill_in(campo, :with => caracter)
+    click_button(boton)
+
+    fill_in(campo, :with => caracter)
+    click_button(boton)
+
+    fill_in(campo, :with => caracter)
+    click_button(boton)
 end
 
-Then(/^deberia ver el mensaje GANASTE!$/) do
-  pending # express the regexp above with the code you wish you had
+When(/^ingreso la letra "(.*?)" en el campo "(.*?)" y hago clic en el boton "(.*?)"$/) do |caracter, campo, boton|
+   fill_in(campo, :with => caracter)
+    click_button(boton)
 end
 
-When(/^cuando se termina el juego$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Then(/^deberia ver la palabra developer$/) do
-  pending # express the regexp above with the code you wish you had
+When(/^hago clic en el enlace "(.*?)"$/) do |link|
+  click_link(link)
 end
