@@ -4,7 +4,7 @@ class Juego
 		@palabra=Palabra.new
 		@palabra.setPalabra("developer")
 		@puntuacion=6
-		@caracteresValidos=[]
+		@caracteresValidos=[]	
 	end
 	
 	def getPuntuacion
@@ -23,10 +23,9 @@ class Juego
 		@palabra.getPalabraAhorcado(@caracteresValidos)
 	end
 
-	def mostrarPalabraSegmentada
+	def mostrarPalabraSegmentada(caracter)
 	@segmentada = ""
-	$i = 0
-	
+	$i = 0	
 		while $i < getPalabra.length   do
 		@letra = getPalabra.slice($i)
 		  
