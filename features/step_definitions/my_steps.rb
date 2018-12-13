@@ -66,18 +66,6 @@ When(/^ingreso todas las "(.*?)" correctas y hago clic en el boton "(.*?)"$/) do
     click_button(boton)
 end
 
-Then(/^deberia ver el mensaje GANASTE!$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-When(/^cuando se termina el juego$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Then(/^deberia ver la palabra developer$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
 When(/^ingreso la letra "(.*?)" en el campo "(.*?)" y hago clic en el boton "(.*?)"$/) do |caracter, campo, boton|
    fill_in(campo, :with => caracter)
     click_button(boton)

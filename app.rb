@@ -11,6 +11,7 @@ post '/ingresarLetra' do
 	@puntuacion = @@juego.getPuntuacion
 	if @@juego.estadoJuego==true then
 		@mensaje = @@juego.mostrarMensaje
+		@palabraSecreta=@@juego.getPalabra
 		erb :terminado
 	else
 		erb :juego
