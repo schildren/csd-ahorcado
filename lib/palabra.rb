@@ -18,16 +18,8 @@ class Palabra
 	  	else 
 	  		return "False"
 	  	end
-   	end
+   	end	
 
-	def dividir(texto)
-		return texto.split(//) 
-	end 
-
-	def getPalabraAhorcado(vector)
-		palabraAhorcado=@palabra
-		vector.each_char { |chr| palabraAhorcado.sub(chr,'-') }
-		return palabraAhorcado
-	end
+	
 
 end
