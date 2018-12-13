@@ -18,4 +18,16 @@ class Juego
 	def getPalabra
 		return @palabra.getPalabra
 	end
+
+	def mostrarPalabraSegmentada
+	@segmentada = ""
+	$i = 0
+		while $i < getPalabra.length   do
+		   @segmentada += "_ "
+		   $i +=1
+		end	
+
+	
+	   return @segmentada
+	end
 end
