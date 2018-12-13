@@ -18,4 +18,8 @@ class Juego
 	def getPalabra
 		return @palabra.getPalabra
 	end
+
+	def getAhorcado
+		@palabra.getPalabraAhorcado(@caracteresValidos)
+	end
 end

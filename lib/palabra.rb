@@ -1,26 +1,33 @@
 class Palabra
 
 	def initialize()
-	  @palabra = ""
+	  	@palabra = ""
 	end
 
 	def getPalabra
-    	  return @palabra
+    	return @palabra
   	end
 
-        def setPalabra(texto)
-    	  @palabra = texto
+  	def setPalabra(texto)
+    	@palabra = texto
   	end
 
 	def contiene(caracter)
-          if @palabra.include? caracter then
-	    return "True"
-	  else return "False"
-	  end
-        end
+		if @palabra.include? caracter then
+	    	return "True"
+	  	else 
+	  		return "False"
+	  	end
+   	end
 
 	def dividir(texto)
 		return texto.split(//) 
 	end 
+
+	def getPalabraAhorcado(vector)
+		palabraAhorcado=@palabra
+		vector.each_char { |chr| palabraAhorcado.sub(chr,'-') }
+		return palabraAhorcado
+	end
 
 end
