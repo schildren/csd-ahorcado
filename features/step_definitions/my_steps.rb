@@ -47,7 +47,23 @@ Then(/^deberia ver el mensaje PERDISTE!$/) do
 end
 
 When(/^ingreso todas las "(.*?)" correctas y hago clic en el boton "(.*?)"$/) do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
+   fill_in(campo, :with => caracter)
+    click_button(boton)
+
+    fill_in(campo, :with => caracter)
+    click_button(boton)
+
+    fill_in(campo, :with => caracter)
+    click_button(boton)
+
+    fill_in(campo, :with => caracter)
+    click_button(boton)
+
+    fill_in(campo, :with => caracter)
+    click_button(boton)
+
+    fill_in(campo, :with => caracter)
+    click_button(boton)
 end
 
 Then(/^deberia ver el mensaje GANASTE!$/) do
@@ -60,4 +76,9 @@ end
 
 Then(/^deberia ver la palabra developer$/) do
   pending # express the regexp above with the code you wish you had
+end
+
+When(/^ingreso la letra "(.*?)" en el campo "(.*?)" y hago clic en el boton "(.*?)"$/) do |caracter, campo, boton|
+   fill_in(campo, :with => caracter)
+    click_button(boton)
 end
