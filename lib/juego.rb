@@ -25,6 +25,11 @@ class Juego
 	end
 
 	def mostrarPalabraSegmentada(caracter)
+
+		if @palabra.contiene(caracter) == "False" then
+		   @puntuacion= @puntuacion - 1
+		end
+
 	$i = 0	
 		while $i < getPalabra.length   do
 		@letra = getPalabra.slice($i)
