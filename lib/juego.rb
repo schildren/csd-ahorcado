@@ -5,6 +5,7 @@ class Juego
 		@palabra.setPalabra(palabra)
 		@puntuacion=6
 		@caracteresValidos=[]	
+                @segmentada = ""
 	end
 	
 	def getPuntuacion
@@ -24,15 +25,16 @@ class Juego
 	end
 
 	def mostrarPalabraSegmentada(caracter)
-	@segmentada = ""
 	$i = 0	
 		while $i < getPalabra.length   do
 		@letra = getPalabra.slice($i)
 		  
-			if @letra == caracter then
-		  	 @segmentada += caracter + " " 
+		   if @letra == caracter then
+                       @segmentada[$i] = caracter
 		   else 
-			@segmentada +=  "_ "
+			if caracter == "" then
+                           @segmentada +=  "_"
+			end
 		   end 
 		   $i +=1
 		end		
