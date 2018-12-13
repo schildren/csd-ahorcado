@@ -7,7 +7,7 @@
 	 	<center>BIENVENIDO !!! <name='label'></name='label'>
 		<center><h1> <%=@palabraSegmentada%> </h1> 
 		<center><h2> Tu puntuación : <%=@puntuacion%> </h2> 
-
+		<img src="./img/game_<%=@puntuacion%>.jpg" />
 		<form method="post" action="/ingresarLetra"> 
 	   		Letra :<input type="text" name="letra" placeholder="ingresar Letra" maxlength="1"/> 
 	   		<input type="submit" name="Ingresar" value="Ingresar letra"  />   
