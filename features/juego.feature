@@ -57,3 +57,13 @@ Scenario: (6) Cuando termina el juego se debe poder iniciar el juego de nuevo
 	And ingreso la letra "o" en el campo "letra" y hago clic en el boton "Ingresar"
 	And hago clic en el enlace "nuevoJuego"
 	Then deberia ver "BIENVENIDO"
+
+Scenario: (7) Cuando inicio el juego
+	Given visito la pagina principal 
+	When ingreso la palabra "casa" en el campo "palabra"
+	And hago clic en "registrar"
+	And ingreso la letra "c" en el campo "letra" y hago clic en el boton "Ingresar"
+	And ingreso la letra "a" en el campo "letra" y hago clic en el boton "Ingresar"
+	Then deberia ver "ca_a"
+
+
