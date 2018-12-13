@@ -33,4 +33,8 @@ class Juego
 		end		
 	   return @segmentada
 	end
+
+	def disminuirPuntuacion
+		@puntuacion-=1
+	end
 end

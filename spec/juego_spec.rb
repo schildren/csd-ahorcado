@@ -16,8 +16,11 @@ describe Juego do
   juego=Juego.new
   juego.getCaracteresValidos.size==0
  end
+
+ it "al fallar, se debe disminuir un punto" do
+  juego=Juego.new
+  puntuacionEsperada=5
+  juego.disminuirPuntuacion
+  juego.getPuntuacion==puntuacionEsperada
+ end
 end
-
-
-
-
