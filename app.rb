@@ -5,7 +5,7 @@ get '/' do
 	@@juego=Juego.new
 	@palabraSecreta=@@juego.getPalabra
 	@palabraSegmentada=""
-	#@palabraSegmentada=@@juego.mostrarPalabraSegmentada("")
+	@palabraSegmentada=@@juego.mostrarPalabraSegmentada("")
     erb :juego
 end
 
