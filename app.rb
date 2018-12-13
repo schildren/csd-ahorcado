@@ -9,7 +9,12 @@ post '/ingresarLetra' do
 	letra =params[:letra]
 	@palabraSegmentada=@@juego.mostrarPalabraSegmentada(letra)
 	@puntuacion = @@juego.getPuntuacion
-	erb :juego
+	if @@juego.estadoJuego==true then
+		erb :terminado
+	else
+		erb :juego
+	end
+	
 end
 
 post '/registraPalabra' do

@@ -6,6 +6,7 @@ class Juego
 		@puntuacion=6
 		@caracteresValidos=[]	
                 @segmentada = ""
+        @juegoTerminado=false
 	end
 	
 	def getPuntuacion
@@ -30,6 +31,10 @@ class Juego
 		   @puntuacion= @puntuacion - 1
 		end
 
+		if (@puntuacion==0) then
+			@juegoTerminado=true	
+		end		
+
 	$i = 0	
 		while $i < getPalabra.length   do
 		@letra = getPalabra.slice($i)
@@ -48,5 +53,9 @@ class Juego
 
 	def disminuirPuntuacion
 		@puntuacion-=1
+	end
+
+	def estadoJuego
+		return @juegoTerminado
 	end
 end
