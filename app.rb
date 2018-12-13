@@ -11,6 +11,8 @@ end
 post '/ingresarLetra' do
 	letra =params[:letra]
 	juego=Juego.new
-	juego.ingresarLetra(letra)
+	juego.mostrarPalabraSegmentada(letra)
+
+	@palabraSecreta=@juego.getPalabra
 	erb :juego
 end

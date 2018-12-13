@@ -23,16 +23,14 @@ class Juego
 	def getAhorcado
 		@palabra.getPalabraAhorcado(@caracteresValidos)
 	end
-	
+
 	def mostrarPalabraSegmentada
 	@segmentada = ""
 	$i = 0
 		while $i < getPalabra.length   do
 		   @segmentada += "_ "
 		   $i +=1
-		end	
-
-	
+		end		
 	   return @segmentada
 	end
 end
