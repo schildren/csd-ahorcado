@@ -1,8 +1,8 @@
 require "./lib/palabra.rb"
 class Juego
-	def initialize()
+	def initialize(palabra)
 		@palabra=Palabra.new
-		@palabra.setPalabra("developer")
+		@palabra.setPalabra(palabra)
 		@puntuacion=6
 		@caracteresValidos=[]	
 	end

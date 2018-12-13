@@ -34,26 +34,30 @@ When(/^ingreso mas de (\d+) veces  el caracter X en el campo "(.*?)" y hago clic
     click_button(boton)
 end
 
-Then(/^deberia ver el mensaje "(.*?)"$/) do |arg1|
-  last_response.body.should =~ /#{arg1}/m
+Given(/^ingreso la palabra "(.*?)" en el campo "(.*?)"$/) do |palabra, campo|
+  fill_in(campo, :with => palabra)
+end
+
+Given(/^hago clic en "(.*?)"$/) do |boton|
+  click_button(boton)
 end
 
 Then(/^deberia ver el mensaje PERDISTE!$/) do
-  #pending 
+  visit '/terminado'
 end
 
 When(/^ingreso todas las "(.*?)" correctas y hago clic en el boton "(.*?)"$/) do |arg1, arg2|
-  #pending 
+  pending # express the regexp above with the code you wish you had
 end
 
 Then(/^deberia ver el mensaje GANASTE!$/) do
-  #pending 
+  pending # express the regexp above with the code you wish you had
 end
 
 When(/^cuando se termina el juego$/) do
-   #pending 
+  pending # express the regexp above with the code you wish you had
 end
 
 Then(/^deberia ver la palabra developer$/) do
-  #pending 
- end
+  pending # express the regexp above with the code you wish you had
+end
