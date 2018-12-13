@@ -6,6 +6,7 @@ get '/' do
 	@palabraSecreta=@@juego.getPalabra
 	@palabraSegmentada=""
 	@palabraSegmentada=@@juego.mostrarPalabraSegmentada("")
+	@puntuacion = @@juego.getPuntuacion
     erb :juego
 end
 
