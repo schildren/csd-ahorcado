@@ -7,3 +7,12 @@ get '/' do
     @palabraSegmentada=@juego.mostrarPalabraSegmentada("e")
     erb :juego
 end
+
+post '/ingresarLetra' do
+	letra =params[:letra]
+	juego=Juego.new
+	juego.mostrarPalabraSegmentada(letra)
+
+	@palabraSecreta=@juego.getPalabra
+	erb :juego
+end

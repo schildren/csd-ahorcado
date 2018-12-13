@@ -19,7 +19,11 @@ class Juego
 		return @palabra.getPalabra
 	end
 
-	def mostrarPalabraSegmentada(caracter)
+	def getAhorcado
+		@palabra.getPalabraAhorcado(@caracteresValidos)
+	end
+
+	def mostrarPalabraSegmentada
 	@segmentada = ""
 	$i = 0
 	
@@ -32,9 +36,11 @@ class Juego
 			@segmentada +=  "_ "
 		   end 
 		   $i +=1
-		end	
-
-	
+		end		
 	   return @segmentada
+	end
+
+	def disminuirPuntuacion
+		@puntuacion-=1
 	end
 end
