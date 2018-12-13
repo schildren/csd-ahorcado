@@ -8,7 +8,9 @@ Scenario: (1) Inicia el juego debe mostrarse un mensaje de Bienvenida
        Then deberia ver "BIENVENIDO"
 
 Scenario: (2) Al iniciar el juego
-       Given visito la pagina principal
+       Given visito la pagina principal 
+       And ingreso la palabra "developer" en el campo "palabra"
+       And hago clic en "registrar"
        Then deberia ver "_ _ _ _ _ _ _ _ _"
 
 Scenario: (3) Cuando pierdo el juego se debe mostrar un mensaje de perdedor
@@ -25,7 +27,5 @@ Scenario: (5) Cuando termina el juego se debe mostrar la palabra secreta
 	Given visito la pagina principal
 	When cuando se termina el juego
 	Then deberia ver la palabra developer
-
-	
 
 
