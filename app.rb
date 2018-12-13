@@ -12,5 +12,7 @@ end
 post '/ingresarLetra' do
 	letra =params[:letra]
 	@palabraSegmentada=@@juego.mostrarPalabraSegmentada(letra)
+	@puntuacion = @@juego.getPuntuacion
 	erb :juego
 end
+
