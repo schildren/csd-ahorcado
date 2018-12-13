@@ -4,12 +4,14 @@
 		<title>Ahorcado</title>
 	</head>
 	<body>
-	 	BIENVENIDO !!! <name='label'>
-		<h1> <%=@palabraSegmentada%> </h1> 
+	 	<center>BIENVENIDO !!! <name='label'></name='label'>
+		<center><h1> <%=@palabraSegmentada%> </h1> 
+		<center><h2> Tu puntuación : <%=@puntuacion%> </h2> 
 
 		<form method="post" action="/ingresarLetra"> 
 	   		Letra :<input type="text" name="letra" placeholder="ingresar Letra" /> 
 	   		<input type="submit" name="Ingresar" value="Ingresar letra" maxlength="1" />   
 		</form>
+		</center>
 	</body>
 </html>
