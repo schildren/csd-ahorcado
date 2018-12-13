@@ -17,7 +17,6 @@ class Juego
 	end
 
 	def mostrarPalabraSegmentada(caracter)
-
 		if @palabra.contiene(caracter) == "False" then
 		   @puntuacion= @puntuacion - 1
 		end
@@ -39,6 +38,7 @@ class Juego
 			@juegoTerminado=true	
 		end		
 	   return @segmentada
+
 	end
 
 	def estadoJuego
