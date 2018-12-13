@@ -23,6 +23,7 @@ class Palabra
 	def dividir(texto)
 		return texto.split(//) 
 	end 
+<<<<<<< HEAD
 
 	def getPalabraAhorcado(vector)
 		palabraAhorcado=@palabra
@@ -30,4 +31,6 @@ class Palabra
 		return palabraAhorcado
 	end
 
+=======
+>>>>>>> 01fc314d9474cdd97a03ff37a9f1065383895292
 end

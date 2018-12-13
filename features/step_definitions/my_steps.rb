@@ -13,3 +13,4 @@ end
 Given(/^selecciono una letra incorrecta "(.*?)"$/) do |boton|
   click_button(boton)
 end
+
