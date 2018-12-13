@@ -19,11 +19,18 @@ class Juego
 		return @palabra.getPalabra
 	end
 
-	def mostrarPalabraSegmentada
+	def mostrarPalabraSegmentada(caracter)
 	@segmentada = ""
 	$i = 0
+	
 		while $i < getPalabra.length   do
-		   @segmentada += "_ "
+		@letra = getPalabra.slice($i)
+		  
+			if @letra == caracter then
+		  	 @segmentada += caracter + " " 
+		   else 
+			@segmentada +=  "_ "
+		   end 
 		   $i +=1
 		end	
 
