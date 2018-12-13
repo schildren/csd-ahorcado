@@ -11,7 +11,7 @@ Scenario: (2) Al iniciar el juego
        Given visito la pagina principal 
        And ingreso la palabra "developer" en el campo "palabra"
        And hago clic en "registrar"
-       Then deberia ver "_ _ _ _ _ _ _ _ _"
+       Then deberia ver "_________"
 
 Scenario: (3) Cuando pierdo el juego se debe mostrar un mensaje de perdedor
 	Given visito la pagina principal
