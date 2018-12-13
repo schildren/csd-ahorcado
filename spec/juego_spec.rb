@@ -12,15 +12,26 @@ describe Juego do
   juego.getPalabra=="developer"
  end
 
- it "Al inicializar el juego, no deben existir letras ingresadas" do
+ it "Al inicializar el juego, la palabra segmentada debe ser _______ para la palabra developer" do
   juego=Juego.new("developer")
-  juego.getCaracteresValidos.size==0
+  juego.mostrarPalabraSegmentada("x")=="_______"
  end
 
  it "al fallar, se debe disminuir un punto" do
   juego=Juego.new("developer")
   puntuacionEsperada=5
-  juego.disminuirPuntuacion
+  palabra=juego.mostrarPalabraSegmentada("x")
   juego.getPuntuacion==puntuacionEsperada
  end
+
+ it "Si la puntuacion es 0 el estado del juego debe ser PERDISTE!" do
+  juego=Juego.new("developer")
+  palabra=juego.mostrarPalabraSegmentada("x")
+  palabra=juego.mostrarPalabraSegmentada("x")
+  palabra=juego.mostrarPalabraSegmentada("x")
+  palabra=juego.mostrarPalabraSegmentada("x")
+  palabra=juego.mostrarPalabraSegmentada("x")
+  juego.estadoJuego=="PERDISTE!"
+ end
+
 end

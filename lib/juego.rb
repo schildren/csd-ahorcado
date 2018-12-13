@@ -4,25 +4,16 @@ class Juego
 		@palabra=Palabra.new
 		@palabra.setPalabra(palabra)
 		@puntuacion=6
-		@caracteresValidos=[]	
                 @segmentada = ""
-        @juegoTerminado=false
+        	@juegoTerminado=false
 	end
 	
 	def getPuntuacion
 		return @puntuacion
 	end
 
-	def getCaracteresValidos
-		return @caracteresValidos
-	end
-
 	def getPalabra
 		return @palabra.getPalabra
-	end
-
-	def getAhorcado
-		@palabra.getPalabraAhorcado(@caracteresValidos)
 	end
 
 	def mostrarPalabraSegmentada(caracter)
@@ -31,7 +22,7 @@ class Juego
 		   @puntuacion= @puntuacion - 1
 		end
 
-	$i = 0	
+		$i = 0	
 		while $i < getPalabra.length   do
 		@letra = getPalabra.slice($i)
 		  
@@ -48,10 +39,6 @@ class Juego
 			@juegoTerminado=true	
 		end		
 	   return @segmentada
-	end
-
-	def disminuirPuntuacion
-		@puntuacion-=1
 	end
 
 	def estadoJuego
